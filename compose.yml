@@ -30,8 +30,8 @@ services:
 
   plausible:
     ports:
-      - 11300:80
-      - 11443:443
+      - 80:80
+      - 443:443
     image: ghcr.io/plausible/community-edition:v2.1.3
     restart: always
     command: sh -c "/entrypoint.sh db createdb && /entrypoint.sh db migrate && /entrypoint.sh run"
